@@ -10,16 +10,39 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var hello: UILabel!
+  
+  @IBOutlet weak var language: UILabel!
+  
+  @IBOutlet weak var button: UIButton!
+  
+  //Language file decalre
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+   changeLanguage()
   }
 
+  func changeLanguage(){
+    let languageFile = LanguageFile()
+    hello.text = languageFile.Hello
+    language.text = languageFile.Changelanguage
+    button.setTitle(languageFile.Arabic, for: .normal)
+  }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
 
-
+  @IBAction func chageLAnguageAction(_ sender: Any) {
+    if LanguageFile.lang == "en"{
+      LanguageFile.lang = "ar"
+    }else {
+      LanguageFile.lang = "en"
+    }
+    changeLanguage()
+  }
+  
 }
 

@@ -1,0 +1,20 @@
+/*
+ Localizable.strings
+ 
+ 
+ Created by Karthick on 12/27/17.
+ Copyright © 2017 tech. All rights reserved.
+ */
+
+//Titles
+
+"Hello" = "Hello";
+"Change language" = "Change language";
+"Arabic" = "Arabic";
+"English" = "English";
+"On" = "On";
+"Off" = "Off";
+
+
+
+
